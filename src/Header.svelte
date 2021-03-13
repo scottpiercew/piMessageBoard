@@ -23,9 +23,11 @@
 </script>
 
 <div class="flex flex-row h-10 justify-between bg-black px-4 pt-2 content-center text-red-600 font-orbitron">
-    <img class="h-20 z-10" src={logo.logoWhiteBG} alt="Unit Logo"/>
+    <div class="w-1/5 z-10">
+        <img class="h-20" src={logo.logoWhiteBG} alt="Unit Logo"/>
+    </div>
     <div class="text-xl">{name.fullName}</div>
-    <div class='tracking-wide w-1/4 flex justify-end text-lg'>
+    <div class='tracking-wide w-1/5 flex justify-end text-lg'>
         <span class="mr-4">{day} / {month} / {year}</span>
         <span class="grid grid-cols-3">
             <span>{toggleZero(hour)}:</span>
