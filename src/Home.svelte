@@ -1,5 +1,9 @@
 <script>
+    import { onMount } from 'svelte';
+    import { fade, fly } from 'svelte/transition';
     export let pages;
+
+    let visibleLeft = true;
 //     var usb = require('usb');
 // usb.on('attach', function(device) {
 //     console.log("usb attached" + device);
@@ -20,10 +24,19 @@
 // });
 let viewPortHeight = window.innerHeight;
 
+onMount( () => {
+		const interval = setInterval(() => {
+			visibleLeft = !visibleLeft;
+		}, 5000);
+	});
 </script>
 <div style="position:fixed; height: 100%; width: 100%;">
-        <div class="flex flex-row">
-        <img src={pages[0].url} alt={pages[0].label} class="w-2/4" style="height: {viewPortHeight}px" />
-        <img src={pages[1].url} alt={pages[1].label} class="w-2/4" style="height: {viewPortHeight}px" />
+    <div class="flex flex-row">
+        {#if visibleLeft}
+        <div class="w-2/4" style="height: {viewPortHeight}px" in:fly="{{ y:500, duraction: 4000 }}" out:fade>
+            <img src={pages[0].url} alt={pages[0].label} class="h-full" />
+        </div>
+        {/if}
+        <!-- <img src={pages[1].url} alt={pages[1].label} class="w-2/4" style="height: {viewPortHeight}px" /> -->
     </div>
 </div>

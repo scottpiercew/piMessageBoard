@@ -1,7 +1,7 @@
 <script>
+    import { onMount } from 'svelte';
     export let name;
     export let logo;
-    import { onMount } from 'svelte';
 
     let date = new Date();
 	$: hour = date.getHours();
