@@ -5,12 +5,11 @@
 
 	// Makes development easier
 	console.log(UNIT)
-
 </script>
 
-<main>
-	<Header name={UNIT.NAME} logo={UNIT.LOGO} />
-	<Home pages={UNIT.FULL_PAGES} />
+<main class="bg-black">
+	<Header name={UNIT.NAME} />
+	<Home images={UNIT.IMAGES} schedule={UNIT.SCHEDULE} cmdrCup={UNIT.COMMANDERS_CUP} logo={UNIT.LOGO} sections={UNIT.SECTIONS} />
 </main>
 
 <style global>
@@ -21,6 +20,11 @@
 		@font-face {
 			font-family: 'Orbitron';
     	src: url('../fonts/Orbitron-Regular.ttf') format('truetype');
+		}
+	}
+	@layer utilities {
+		.filter-invert {
+			filter: invert(1);
 		}
 	}
 </style>

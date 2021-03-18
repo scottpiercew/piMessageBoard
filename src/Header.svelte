@@ -1,7 +1,6 @@
 <script>
     import { onMount } from 'svelte';
     export let name;
-    export let logo;
 
     let date = new Date();
 	$: hour = date.getHours();
@@ -21,19 +20,15 @@
 
     const toggleZero = (num) => (num < 10) ? `0${num}` : num;
 </script>
-
-<div class="flex flex-row h-10 justify-between bg-black px-4 pt-2 content-center text-red-600 font-orbitron">
-    <div class="w-1/5 z-10">
-        <img class="h-20" src={logo.logoWhiteBG} alt="Unit Logo"/>
-    </div>
-    <div class="text-xl">{name.fullName}</div>
-    <div class='tracking-wide w-1/5 flex justify-end text-lg'>
+<div class="flex flex-row h-12 justify-between bg-black p-4 px-8 content-center text-red-700 font-orbitron">
+    <div class="text-2xl tracking-wide font-bold text-red-600">{name.fullName}</div>
+    <div class='tracking-wide w-1/4 flex justify-end text-lg'>
         <span class="mr-4">{day} / {month} / {year}</span>
         <span class="grid grid-cols-3">
             <span>{toggleZero(hour)}:</span>
             <span>{toggleZero(min)}:</span>
             <span>{toggleZero(sec)}</span>
         </span>
-        <span> {zone}</span>
+        <span class="ml-2"> {zone}</span>
     </div>
 </div>

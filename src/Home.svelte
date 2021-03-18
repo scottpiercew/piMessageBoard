@@ -1,42 +1,36 @@
 <script>
     import { onMount } from 'svelte';
-    import { fade, fly } from 'svelte/transition';
-    export let pages;
+    import { fade } from 'svelte/transition';
+    import Sidebar from './Sidebar.svelte';
+    import { quintOut } from 'svelte/easing';
+    import { flip } from 'svelte/animate';
+    export let images;
 
-    let visibleLeft = true;
-//     var usb = require('usb');
-// usb.on('attach', function(device) {
-//     console.log("usb attached" + device);
-// });
-// var devices = usb.getDeviceList();
-// console.log(devices);
-// var device = devices[0];
-// device.open();
+    let viewPortHeight = window.innerHeight;
+    let imagesIndex = 0;
 
-// device.interfaces[0].endpoints[0].transfer(64, function(error, data) {
-//       console.log(error, data); // null, <Buffer 00, 00, 00, 00, 00, 00, 00, 00
-// });
+    onMount( () => {
+            const interval = setInterval(() => {
+                next()
+            }, 10000);
+        });
 
-// var buf = new Buffer([0xFF, 0x12, 0x01]);
+    const next = () => imagesIndex = (imagesIndex + 1) % images.length;
 
-// device.interfaces[0].endpoints[1].transfer(buf, function(error) {
-//   console.log(error); // null
-// });
-let viewPortHeight = window.innerHeight;
-
-onMount( () => {
-		const interval = setInterval(() => {
-			visibleLeft = !visibleLeft;
-		}, 5000);
-	});
 </script>
-<div style="position:fixed; height: 100%; width: 100%;">
-    <div class="flex flex-row">
-        {#if visibleLeft}
-        <div class="w-2/4" style="height: {viewPortHeight}px" in:fly="{{ y:500, duraction: 4000 }}" out:fade>
-            <img src={pages[0].url} alt={pages[0].label} class="h-full" />
+
+<div class="flex bg-black p-8">
+    <div class="w-1/3 h-full z-10" style="height: {viewPortHeight - 96}px">
+        <Sidebar schedule={$$props.schedule} cmdrCup={$$props.cmdrCup} images={images} imagesIndexNext={imagesIndex} logo={$$props.logo} sections={$$props.sections} />
+    </div>
+    <div class="w-2/3 flex flex-col-reverse justify-end ml-8" style="height: {viewPortHeight - 96}px">
+        {#each images as image, index (image.id)}
+        <div class="h-full flex justify-end items-center" animate:flip={{duration: 1000, easing: quintOut}} transition:fade|local={{duration: 1000}}>
+            {#if index == imagesIndex}
+                <img src={image.url} alt={image.label} id={image.id} class="h-full object-contain rounded-sm shadow-md justify-self-end self-center"/>
+            {/if}
         </div>
-        {/if}
-        <!-- <img src={pages[1].url} alt={pages[1].label} class="w-2/4" style="height: {viewPortHeight}px" /> -->
+        {/each}
     </div>
 </div>
+

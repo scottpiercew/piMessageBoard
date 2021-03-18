@@ -1,3 +1,4 @@
+const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -13,6 +14,16 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    colors: {
+      white: colors.white,
+      red: colors.red,
+      black: colors.black,
+      gray: colors.gray,
+      warmGray: colors.warmGray,
+    },
+    maxHeight: {
+      "1/2": "50vh",
+    },
     extend: {
       fontFamily: {
         orbitron: ["Orbitron", ...defaultTheme.fontFamily.sans],
