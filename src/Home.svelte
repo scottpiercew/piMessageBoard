@@ -20,7 +20,7 @@
 </script>
 
 <div class="flex bg-warmGray-900 p-8">
-    <div class="w-1/3 h-full z-10" style="height: {viewPortHeight - 96}px">
+    <div class="w-1/3 z-10" style="height: {viewPortHeight - 96}px">
         <Sidebar schedule={$$props.schedule} cmdrCup={$$props.cmdrCup} images={images} imagesIndexNext={imagesIndex} logo={$$props.logo} sections={$$props.sections} />
     </div>
     <div class="w-2/3 flex flex-col-reverse justify-end ml-8" style="height: {viewPortHeight - 96}px">
