@@ -7,7 +7,7 @@
 	console.log(UNIT)
 </script>
 
-<main class="bg-black">
+<main class="bg-warmGray-900">
 	<Header name={UNIT.NAME} />
 	<Home images={UNIT.IMAGES} schedule={UNIT.SCHEDULE} cmdrCup={UNIT.COMMANDERS_CUP} logo={UNIT.LOGO} sections={UNIT.SECTIONS} />
 </main>

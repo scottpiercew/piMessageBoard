@@ -12,14 +12,14 @@
     onMount( () => {
             const interval = setInterval(() => {
                 next()
-            }, 10000);
+            }, 15000);
         });
 
     const next = () => imagesIndex = (imagesIndex + 1) % images.length;
 
 </script>
 
-<div class="flex bg-black p-8">
+<div class="flex bg-warmGray-900 p-8">
     <div class="w-1/3 h-full z-10" style="height: {viewPortHeight - 96}px">
         <Sidebar schedule={$$props.schedule} cmdrCup={$$props.cmdrCup} images={images} imagesIndexNext={imagesIndex} logo={$$props.logo} sections={$$props.sections} />
     </div>

@@ -20,9 +20,9 @@
 
     const toggleZero = (num) => (num < 10) ? `0${num}` : num;
 </script>
-<div class="flex flex-row h-12 justify-between bg-black p-4 px-8 content-center text-red-700 font-orbitron">
+<div class="flex flex-row h-12 justify-between bg-warmGray-900 p-4 px-8 content-center text-red-700 font-orbitron">
     <div class="text-2xl tracking-wide font-bold text-red-600">{name.fullName}</div>
-    <div class='tracking-wide w-1/4 flex justify-end text-lg'>
+    <div class='tracking-wide flex justify-end text-lg'>
         <span class="mr-4">{day} / {month} / {year}</span>
         <span class="grid grid-cols-3">
             <span>{toggleZero(hour)}:</span>

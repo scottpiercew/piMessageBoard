@@ -10,7 +10,7 @@
 </script>
 <div class="h-full flex flex-col space-y-8 content-between">
   <div class="rounded-sm shadow-md bg-warmGray-900 w-full">
-    <div class="py-2 bg-warmGray-900 text-warmGray-200 text-center text-lg flex justify-start content-center">
+    <div class="py-2 bg-warmGray-800 text-warmGray-200 text-center text-lg flex justify-start content-center">
       <div class="flex h-10 w-10">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 297" fill="currentColor" style="enable-background:new 0 0 297 297;" stroke="currentColor" xml:space="preserve" class="h-8 p-1 w-12 inline-flex ralative bg-warmGray-800 rounded-full text-red-700 flex items-center justify-center ml-2">
           <g>
@@ -55,14 +55,14 @@
     </div>
   </div>
   <div class="rounded-sm shadow-md bg-warmGray-900">
-    <div class="py-2 bg-warmGray-900 text-warmGray-200 text-center text-lg flex justify-start content-center">
+    <div class="py-2 bg-warmGray-800 text-warmGray-200 text-center text-lg flex justify-start content-center">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="bg-warmGray-800 rounded-full text-red-700 p-2 h-10 w-10 flex items-center justify-center ml-2">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
       <div class="self-center w-4/5">{schedule.label}</div>
     </div>
     <div class="relative bg-black">
-      <div class="absolute inset-0 opacity-20 bg-warmGray-100 z-50"></div>
+      <div class="absolute inset-0 opacity-30 bg-warmGray-100 z-50"></div>
       <img src={schedule.schedule} alt={schedule.schedule} class="w-full p-4 filter-invert max-h-1/2" />
     </div>
   </div>
