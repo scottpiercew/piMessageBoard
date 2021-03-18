@@ -8,7 +8,7 @@
 </script>
 
 <main class="bg-warmGray-900">
-	<Header name={UNIT.NAME} />
+	<Header name={UNIT.NAME} logo={UNIT.LOGO} />
 	<Home images={UNIT.IMAGES} schedule={UNIT.SCHEDULE} cmdrCup={UNIT.COMMANDERS_CUP} logo={UNIT.LOGO} sections={UNIT.SECTIONS} />
 </main>
 
@@ -20,11 +20,11 @@
 		@font-face {
 			font-family: 'Orbitron';
     	src: url('../fonts/Orbitron-Regular.ttf') format('truetype');
+			}
 		}
-	}
-	@layer utilities {
-		.filter-invert {
-			filter: invert(1);
+		@layer utilities {
+			.filter-invert {
+				filter: invert(1);
+			}
 		}
-	}
 </style>

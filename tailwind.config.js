@@ -22,7 +22,7 @@ module.exports = {
       warmGray: colors.warmGray,
     },
     maxHeight: {
-      "1/2": "50vh",
+      "2/3": "60vh",
     },
     extend: {
       fontFamily: {

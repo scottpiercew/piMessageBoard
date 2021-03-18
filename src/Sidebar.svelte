@@ -1,10 +1,6 @@
 <script>
-  import { fade } from 'svelte/transition';
   export let schedule;
   export let cmdrCup;
-  export let images;
-  export let imagesIndexNext;
-  export let logo;
   export let sections;
 
 </script>
@@ -63,17 +59,7 @@
     </div>
     <div class="relative bg-black">
       <div class="absolute inset-0 opacity-30 bg-warmGray-100 z-50"></div>
-      <img src={schedule.schedule} alt={schedule.schedule} class="w-full p-4 filter-invert max-h-1/2" />
-    </div>
-  </div>
-  <div class="rounded-sm shadow-md">
-    <div class="w-full flex justify-start h-20">
-        <img class="h-20 w-20" src={logo.logoWhiteBG} alt="Unit Logo"/>
-      {#each images as image, index}
-        {#if index == imagesIndexNext + 1}
-            <img src={image.url} alt={image.label} id={image.id} class="w-1/4 object-contain rounded-sm shadow-md" in:fade="{{delay: 1000, duration: 1000}}" out:fade />
-        {/if}
-      {/each}
+      <img src={schedule.schedule} alt={schedule.schedule} class="w-full p-4 filter-invert max-h-2/3" />
     </div>
   </div>
 </div>
