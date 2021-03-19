@@ -7,7 +7,7 @@
 	console.log(UNIT)
 </script>
 
-<main class="bg-warmGray-900">
+<main class="h-5/6 w-11/12 m-auto">
 	<Header name={UNIT.NAME} logo={UNIT.LOGO} />
 	<Home images={UNIT.IMAGES} schedule={UNIT.SCHEDULE} cmdrCup={UNIT.COMMANDERS_CUP} logo={UNIT.LOGO} sections={UNIT.SECTIONS} />
 </main>
@@ -24,7 +24,7 @@
 		}
 		@layer utilities {
 			.filter-invert {
-				filter: invert(1);
+				filter: invert(1) brightness(0.8) contrast(1.3);
 			}
 		}
 </style>
