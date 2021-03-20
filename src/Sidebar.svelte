@@ -57,9 +57,11 @@
       </svg>
       <div class="self-center w-4/5 tracking-wide">{schedule.label}</div>
     </div>
-    <div class="relative bg-black">
+    <div class="relative bg-black text-warmGray-100 p-4">
       <div class="absolute inset-0 opacity-10 bg-white z-50"></div>
-      <img src={schedule.schedule} alt={schedule.schedule} class="w-full p-4 filter-invert max-h-2/3 object-scale-down" />
+      <div class="pt-4 text-lg">{schedule.events[0]}</div>
+      <div class="pt-4 text-lg">{schedule.events[1]}</div>
+      <!-- <img src={schedule.schedule} alt={schedule.schedule} class="w-full p-4 filter-invert max-h-2/3 object-scale-down" /> -->
     </div>
   </div>
 </div>

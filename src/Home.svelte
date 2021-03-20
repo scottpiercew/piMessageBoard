@@ -23,13 +23,14 @@
     </div>
     <div class="w-1/2 flex justify-end ml-8">
     <!-- <div class="w-1/2 flex justify-end ml-8" style="height: {viewPortHeight - 160}px"> -->
-        {#each images as image, index (image.id)}
+        <img src={images[1].url} alt={images[1].label} class="w-full pb-20" />
+        <!-- {#each images as image, index (image.id)}
         <div class="h-full flex justify-end items-center">
             {#if index == imagesIndex}
                 <img src={image.url} alt={image.label} id={image.id} class="object-contain rounded-sm shadow-md justify-self-end self-center"/>
             {/if}
         </div>
-        {/each}
+        {/each} -->
     </div>
 </div>
 

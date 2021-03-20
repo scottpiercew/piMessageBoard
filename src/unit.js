@@ -11,7 +11,8 @@ const LOGO = {
 // Display a schedule or calendar
 const SCHEDULE = {
   schedule: "images/schedule.png",
-  label: "Unit Schedule",
+  label: "Events Scored",
+  events: ["Combat Fitness Test", "Rifle Range"],
 };
 
 // Array of pages to rotate through
