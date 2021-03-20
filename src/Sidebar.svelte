@@ -36,7 +36,7 @@
           </g>
         </svg>
       </div>
-      <div class="self-center w-4/5 tracking-wide">{cmdrCup.title}</div>
+      <div class="self-center w-4/5 tracking-wide text-xl">{cmdrCup.title}</div>
     </div>
     <div class="relative p-2">
       <div class="relative grid grid-cols-3 gap-x-4 text-warmGray-100">
@@ -55,7 +55,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="bg-gray-700 rounded-full text-red-700 p-2 h-10 w-10 flex items-center justify-center ml-2">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
-      <div class="self-center w-4/5 tracking-wide">{schedule.label}</div>
+      <div class="self-center w-4/5 tracking-wide text-xl">{schedule.label}</div>
     </div>
     <div class="relative bg-black text-warmGray-100 p-4">
       <div class="absolute inset-0 opacity-10 bg-white z-50"></div>

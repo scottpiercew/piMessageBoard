@@ -21,7 +21,7 @@
     <!-- <div class="w-1/2" style="height: {viewPortHeight - 160}px"> -->
         <Sidebar schedule={$$props.schedule} cmdrCup={$$props.cmdrCup} sections={$$props.sections} />
     </div>
-    <div class="w-1/2 flex justify-end ml-8">
+    <div class="w-2/3 flex justify-end ml-8" style="height: {viewPortHeight - 80}px">
     <!-- <div class="w-1/2 flex justify-end ml-8" style="height: {viewPortHeight - 160}px"> -->
         <img src={images[1].url} alt={images[1].label} class="w-full pb-20" />
         <!-- {#each images as image, index (image.id)}
