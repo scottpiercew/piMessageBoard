@@ -23,7 +23,7 @@
 <div class="flex flex-row h-20 justify-between bg-black pt-8 px-8 content-center text-red-700 font-orbitron">
     <div class="text-5xl tracking-wide font-bold text-red-600">{name.fullName}</div>
     <div class='tracking-wide flex justify-end text-2xl'>
-        <span class="mr-4">{day} / {month} / {year}</span>
+        <span class="mr-4">{month} / {day} / {year}</span>
         <span class="grid grid-cols-3">
             <span>{toggleZero(hour)}:</span>
             <span>{toggleZero(min)}:</span>
