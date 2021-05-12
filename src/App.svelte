@@ -9,7 +9,7 @@
 
 <main class="h-5/6 m-auto" style="width:97%">
 	<Header name={UNIT.NAME} logo={UNIT.LOGO} />
-	<Home images={UNIT.IMAGES} schedule={UNIT.SCHEDULE} cmdrCup={UNIT.COMMANDERS_CUP} logo={UNIT.LOGO} sections={UNIT.SECTIONS} />
+	<Home UNIT={UNIT} />
 </main>
 
 <style global>

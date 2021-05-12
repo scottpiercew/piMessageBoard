@@ -8,11 +8,18 @@ const LOGO = {
   logoWhiteBG: "images/mc-seal.png",
 };
 
-// Display a schedule or calendar
+// Display individual day's schedule or calendar
 const SCHEDULE = {
-  schedule: "images/schedule.png",
-  label: "Events Scored",
-  events: ["Combat Fitness Test", "Rifle Range"],
+  15: {
+    title: "Saturday, 15th",
+    schedule: "images/mc-flag.png",
+    label: "Schedule"
+  },
+  16: {
+    title: "Sunday, 16th",
+    schedule: "images/mc-flag.png",
+    label: "Schedule"
+  },
 };
 
 // Array of pages to rotate through
@@ -22,8 +29,8 @@ const IMAGES = [
   { id: 3, url: "images/f-35.jpg", label: "F-35" },
 ];
 
-const COMMANDERS_CUP = {
-  title: "2021 Commander's Cup",
+const EVENTNAME = {
+  title: "2021 Commander's Cup"
 };
 
 const SECTIONS = [
@@ -32,13 +39,21 @@ const SECTIONS = [
   { name: "2nd PLT", points: 225 },
 ];
 
+// List of events completed during commander's cup to 
+// clarify the section points
+const EVENTS = {
+  title: "Events Scored",
+  events: ["Combat Fitness Test", "Rifle Range", "PME"],
+}
+
 const UNIT = {
   NAME,
   LOGO,
   SCHEDULE,
   IMAGES,
-  COMMANDERS_CUP,
+  EVENTNAME,
   SECTIONS,
+  EVENTS,
 };
 
 export default UNIT;

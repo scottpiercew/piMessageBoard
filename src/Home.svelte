@@ -4,8 +4,9 @@
     import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 
-    export let images;
+    export let UNIT;
 
+    let images = UNIT.IMAGES;
     let viewPortHeight = window.innerHeight;
     let imagesIndex = 0;
 
@@ -22,7 +23,7 @@
 <div class="flex bg-black p-8 h-5/6">
     <div class="w-1/2">
     <!-- <div class="w-1/2" style="height: {viewPortHeight - 160}px"> -->
-        <Sidebar schedule={$$props.schedule} cmdrCup={$$props.cmdrCup} sections={$$props.sections} />
+        <Sidebar {...UNIT} />
     </div>
     <!-- <div class="w-2/3 flex justify-end ml-8" style="height: {viewPortHeight - 80}px"> -->
     <div class="w-1/2 flex ml-8" style="height: {viewPortHeight - 160}px">
