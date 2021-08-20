@@ -4,8 +4,9 @@
     import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 
-    export let images;
+    export let UNIT;
 
+    let images = UNIT.IMAGES;
     let viewPortHeight = window.innerHeight;
     let imagesIndex = 0;
 
