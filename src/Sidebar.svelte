@@ -4,7 +4,6 @@
   export let SCHEDULE;
   export let EVENTNAME;
   export let SECTIONS;
-  export let EVENTS;
 
   let date = new Date();
   $: day = date.getDate();
@@ -79,6 +78,7 @@ onMount( () => {
         {/each}
       </div>
     </div>
+  </div>
   <div class="rounded-sm shadow-md bg-black">
     <div class="py-2 bg-gray-800 text-warmGray-200 text-center text-lg flex justify-start content-center shadow-md rounded-sm">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="bg-gray-700 rounded-full text-red-700 p-2 h-10 w-10 flex items-center justify-center ml-2">
