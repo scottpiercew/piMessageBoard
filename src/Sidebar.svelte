@@ -7,7 +7,7 @@
 
   let date = new Date();
   $: day = date.getDate();
-  $: schedule = SCHEDULE[day] ? SCHEDULE[day] : SCHEDULE[Object.keys(SCHEDULE)[0]];
+  $: schedule = SCHEDULE.day;
 
 // Check every hour for the day to change
 onMount( () => {
