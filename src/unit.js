@@ -11,8 +11,23 @@ const LOGO = {
 // Display a schedule or calendar
 const SCHEDULE = {
   schedule: "images/schedule.png",
+  daySchedule: "images/future-drill-dates.png",
+  day: "Future Drill Dates",
+  dates: [
+    "September: End FY Training, CFT",
+    "October: FY Training",
+    "November: Birthday Ball Celebration",
+    "December: End CY Training, CFT",
+  ],
   label: "Events Scored",
-  events: ["Combat Fitness Test", "Rifle Range"],
+  events: [
+    "Combat Fitness Test",
+    "Rifle Range",
+    "Medical/Dental",
+    "Officer PME",
+    "Physical Fitness Test",
+    "Ball Fundraiser",
+  ],
 };
 
 // Array of pages to rotate through

@@ -19,12 +19,10 @@
 
 </script>
 
-<div class="flex bg-black p-8 h-5/6">
-    <div class="w-1/2">
-    <!-- <div class="w-1/2" style="height: {viewPortHeight - 160}px"> -->
+<div class="flex bg-black p-8 pb-0 overflow-hidden h-5/6">
+    <div class="w-1/2 pr-8">
         <Sidebar schedule={$$props.schedule} cmdrCup={$$props.cmdrCup} sections={$$props.sections} />
     </div>
-    <!-- <div class="w-2/3 flex justify-end ml-8" style="height: {viewPortHeight - 80}px"> -->
     <div class="w-1/2 flex ml-8" style="height: {viewPortHeight - 160}px">
         <!-- <img src={images[1].url} alt={images[1].label} class="w-full pb-20" /> -->
         <!-- {#each images as image, index (image.id)}
@@ -35,11 +33,12 @@
         </div>
         {/each} -->
         <!-- <div><img src={images[2].url} alt="" /></div> -->
-        {#each [images[imagesIndex].url] as src (imagesIndex)}
-            <div class="flex flex-end flex-shrink m-auto" style="height: {viewPortHeight - 180}px">
-                <img transition:fly="{{delay: 250, duration: 1000, x: 100, y: 500, opacity: 0.5, easing: quintOut}}" {src} alt="" />
+        <!-- {#each [images[imagesIndex].url] as src (imagesIndex)}
+            <div class="flex flex-end m-auto" style="height: {viewPortHeight - 180}px">
+                <img class="object-scale-down" transition:fly="{{delay: 250, duration: 1000, x: 100, y: 500, opacity: 0.5, easing: quintOut}}" {src} alt="" />
             </div>
-        {/each}
+        {/each} -->
+        <img class="object-fit" transition:fly="{{delay: 250, duration: 1000, x: 100, y: 500, opacity: 0.5, easing: quintOut}}" src={images[0].url} alt="" />
     </div>
 </div>
 
